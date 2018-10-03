@@ -241,7 +241,7 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <sads:DebugSymbol.Symbol>d0RDOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEb2N1bWVudHNcVWlQYXRoXFNhbGVzZm9yY2UyXE1haW4ueGFtbCw8A/UBDwIBAT8JdBQCASB3DdIBGAIBE9UBEeoBHAIBAkALcxwCASF4D4YBGgIBHocBD5UBGgIBHJYBD6QBGgIBGqUBD7MBGgIBGLQBD8IBGgIBFsMBD9EBGgIBFNcBRtcBYwIBA9kBE+kBJQIBBEDBAUDhAQIBLkYRcBwCASKEAaIBhAGLAgIBH5MBogGTAbwCAgEdogGiAaIBqQICARuxAaIBsQHHAgIBGcABogHAAa8CAgEXzwGiAc8BmgICARXZAaoC2QGCAwIBEt8BGeYBJAIBBUcTR4sBAgEtSBNWHgIBK1cTWyECAShcE2AhAgElYRNvHgIBI+ABG+QBLAIBCuUBG+UB6AECAQZUpgFUoAMCASxZpgFZ/AECASpXrwJXzwICASlepgFe0wECASdcrwJcuQICASZtpgFt0AECASTgAd0C4AHiAgIBEeIBrgHiAeUCAgEQ4AGRAeABlgECAQ/gAVfgAV0CAQ7gAWjgAXwCAQzgAdUB4AGZAgIBC+UBXOUBcAIBCOUBpgHlAbQBAgEH</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11DOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEZXNrdG9wXDAxVmxhZHlzbGF2XEdpdEh1Ylx1aXBhdGhfcHJvamVjdFxTYWxlc2ZvcmNlMlxNYWluLnhhbWwsPAP1AQ8CAQE/CXQUAgEgdw3SARgCARPVARHqARwCAQJAC3McAgEheA+GARoCAR6HAQ+VARoCARyWAQ+kARoCARqlAQ+zARoCARi0AQ/CARoCARbDAQ/RARoCARTXAUbXAWMCAQPZARPpASUCAQRAwQFA4QECAS5GEXAcAgEihAGiAYQBiwICAR+TAaIBkwG8AgIBHaIBogGiAakCAgEbsQGiAbEBxwICARnAAaIBwAGvAgIBF88BogHPAZoCAgEV2QGqAtkBggMCARLfARnmASQCAQVHE0eLAQIBLUgTVh4CAStXE1shAgEoXBNgIQIBJWETbx4CASPgARvkASwCAQrlARvlAegBAgEGVKYBVKADAgEsWaYBWfwBAgEqV68CV88CAgEpXqYBXtMBAgEnXK8CXLkCAgEmbaYBbdABAgEk4AHdAuAB4gICARHiAa4B4gHlAgIBEOABkQHgAZYBAgEP4AFX4AFdAgEO4AFo4AF8AgEM4AHVAeABmQICAQvlAVzlAXACAQjlAaYB5QG0AQIBBw==</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -288,7 +288,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="BrowserScope_4" sap:VirtualizedContainerService.HintSize="414,503" />
-      <sap2010:ViewStateData Id="Sequence_11" sap:VirtualizedContainerService.HintSize="436,627">
+      <sap2010:ViewStateData Id="Sequence_11" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

@@ -114,7 +114,7 @@
     </Flowchart.StartNode>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
-    <sads:DebugSymbol.Symbol>d0RDOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEb2N1bWVudHNcVWlQYXRoXFNhbGVzZm9yY2UzXE1haW4ueGFtbBZEA3YPAgEBRwlgFAIBDGMNbhgCAQJOC06xAQIBGU8LVhQCARVXC14UAgERXwtfmQECAQ1oD2ieAQIBCGkPbSQCAQNOOU5CAgEbTndOfgIBGlQ2VFoCARhRN1FAAgEWXDpccAIBFFk7WUMCARJfiwFflgECAQ9fRF9TAgEOaFtoagIBC2goaDQCAQlpsQJp0QICAQdphAFpkAECAQVpmAJprQICAQQ=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11DOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEZXNrdG9wXDAxVmxhZHlzbGF2XEdpdEh1Ylx1aXBhdGhfcHJvamVjdFxTYWxlc2ZvcmNlM1xNYWluLnhhbWwWRAN2DwIBAUcJYBQCAQxjDW4YAgECTgtOsQECARlPC1YUAgEVVwteFAIBEV8LX5kBAgENaA9ongECAQhpD20kAgEDTjlOQgIBG053Tn4CARpUNlRaAgEYUTdRQAIBFlw6XHACARRZO1lDAgESX4sBX5YBAgEPX0RfUwIBDmhbaGoCAQtoKGg0AgEJabECadECAgEHaYQBaZABAgEFaZgCaa0CAgEE</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -122,7 +122,7 @@
       <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="314,60" />
       <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="314,60" />
       <sap2010:ViewStateData Id="WriteTextFile_1" sap:VirtualizedContainerService.HintSize="314,87" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="336,510">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
