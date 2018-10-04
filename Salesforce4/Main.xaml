@@ -241,6 +241,15 @@
                         </ui:ForEachRow.Body>
                       </ui:ForEachRow>
                     </Sequence>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_13">
+                        <ui:CloseApplication DisplayName="Close application 'iexplore.exe Contact'" sap2010:WorkflowViewState.IdRef="CloseApplication_2">
+                          <ui:CloseApplication.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e0461bc6025b7535b058f16ada3ec38e" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='Contact Edit: New Contact ~ Salesforce - Professional Edition - *' /&gt;" WaitForReady="INTERACTIVE" />
+                          </ui:CloseApplication.Target>
+                        </ui:CloseApplication>
+                      </FlowStep>
+                    </FlowStep.Next>
                   </FlowStep>
                 </FlowStep.Next>
               </FlowStep>
@@ -253,7 +262,8 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <sads:DebugSymbol.Symbol>d11DOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEZXNrdG9wXDAxVmxhZHlzbGF2XEdpdEh1Ylx1aXBhdGhfcHJvamVjdFxTYWxlc2ZvcmNlNFxNYWluLnhhbWw4RAOBAg8CAQFKCWIUAgExZQ2aARgCASKdARGdAcIBAgEeoAEV8wEgAgECTgthHAIBMmYPmQEgAgEjnQE/nQFNAgEgnQGBAZ0BjwECAR+hARevASICARywARe+ASICARq/ARfyAScCAQNOmgJOiQMCATtUEV4cAgEzZsUBZuUBAgEwbBWWASACASStAaoBrQGUAgIBHbwBqgG8AZ0CAgEbvwEwvwE+AgEYxQEd7wEoAgEEVRNcJAIBN10TXZUBAgE0bRdtjwECAS9uF3wiAgEtfReBASUCASqCAReGASUCASeHAReVASICASXGAR/GAaABAgEWxwEfywEtAgETzAEf0AEtAgEQ0QEf1QEtAgEN1gEf2gEtAgEK2wEf3wEtAgEH4AEf7gEqAgEFV6YBV5wCAgE6WkZaSwIBOF2LAV2SAQIBNl1MXVMCATV6qgF6pAMCAS5/qgF/gAICASx9swJ90wICASuEAaoBhAHXAQIBKYIBswKCAb0CAgEokwGqAZMB1AECASbGAXbGAZ0BAgEXyQGyAckBuQICARXHAcECxwHpAgIBFM4BsgHOAbgCAgESzAHAAswB5wICARHTAbIB0wGvAgIBD9EBtwLRAccCAgEO2AGyAdgBsAICAQzWAbgC1gHbAgIBC90BsgHdAbACAgEJ2wG4AtsB2wICAQjsAbIB7AHNAgIBBg==</sads:DebugSymbol.Symbol>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <sads:DebugSymbol.Symbol>d11DOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEZXNrdG9wXDAxVmxhZHlzbGF2XEdpdEh1Ylx1aXBhdGhfcHJvamVjdFxTYWxlc2ZvcmNlNFxNYWluLnhhbWw6RAOLAg8CAQFKCWIUAgEzZQ2aARgCASSdARGdAcIBAgEgoAEV8wEgAgEE9gEZ+gEvAgECTgthHAIBNGYPmQEgAgElnQE/nQFNAgEinQGBAZ0BjwECASGhARevASICAR6wARe+ASICARy/ARfyAScCAQX4AawB+AGmAgIBA06aAk6JAwIBPVQRXhwCATVmxQFm5QECATJsFZYBIAIBJq0BqgGtAZQCAgEfvAGqAbwBnQICAR2/ATC/AT4CARrFAR3vASgCAQZVE1wkAgE5XRNdlQECATZtF22PAQIBMW4XfCICAS99F4EBJQIBLIIBF4YBJQIBKYcBF5UBIgIBJ8YBH8YBoAECARjHAR/LAS0CARXMAR/QAS0CARLRAR/VAS0CAQ/WAR/aAS0CAQzbAR/fAS0CAQngAR/uASoCAQdXpgFXnAICATxaRlpLAgE6XYsBXZIBAgE4XUxdUwIBN3qqAXqkAwIBMH+qAX+AAgIBLn2zAn3TAgIBLYQBqgGEAdcBAgErggGzAoIBvQICASqTAaoBkwHUAQIBKMYBdsYBnQECARnJAbIByQG5AgIBF8cBwQLHAekCAgEWzgGyAc4BuAICARTMAcACzAHnAgIBE9MBsgHTAa8CAgER0QG3AtEBxwICARDYAbIB2AGwAgIBDtYBuALWAdsCAgEN3QGyAd0BsAICAQvbAbgC2wHbAgIBCuwBsgHsAc0CAgEI</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -267,7 +277,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="WindowScope_2" sap:VirtualizedContainerService.HintSize="414,503" />
-      <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="436,627">
+      <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -331,12 +341,27 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CloseApplication_2" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_13">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,525.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,424.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,365.5 300,404.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,475.5 300,525.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
