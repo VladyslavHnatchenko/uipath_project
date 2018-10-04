@@ -242,10 +242,10 @@
                       </ui:ForEachRow>
                     </Sequence>
                     <FlowStep.Next>
-                      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_13">
-                        <ui:CloseApplication DisplayName="Close application 'iexplore.exe Contact'" sap2010:WorkflowViewState.IdRef="CloseApplication_2">
+                      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_14">
+                        <ui:CloseApplication DisplayName="Close application 'iexplore.exe Salesforce'" sap2010:WorkflowViewState.IdRef="CloseApplication_3">
                           <ui:CloseApplication.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e0461bc6025b7535b058f16ada3ec38e" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='Contact Edit: New Contact ~ Salesforce - Professional Edition - *' /&gt;" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e4e02f898201a4ed1f51fb1ef794dbb4" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='Contact Edit: New Contact ~ Salesforce - Professional Edition - *' /&gt;" WaitForReady="INTERACTIVE" />
                           </ui:CloseApplication.Target>
                         </ui:CloseApplication>
                       </FlowStep>
@@ -341,17 +341,17 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="CloseApplication_2" sap:VirtualizedContainerService.HintSize="200,51">
+      <sap2010:ViewStateData Id="CloseApplication_3" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="FlowStep_13">
+      <sap2010:ViewStateData Id="FlowStep_14">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,525.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,514.02</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -361,7 +361,7 @@
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">200,424.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,475.5 300,525.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,475.5 300,514.02</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
