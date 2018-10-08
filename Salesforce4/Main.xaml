@@ -75,7 +75,7 @@
           <Sequence.Variables>
             <Variable x:TypeArguments="ui:GenericValue" Name="Wwg" />
           </Sequence.Variables>
-          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Inbox Vla Rctrl_ren'" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="df0c7b82407664027b44816f0d651e03" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='Inbox - Vladyslav.Hnatchenko@eleks.com - Outlook' /&gt;">
+          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Inbox Vla Rctrl_ren'" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="54618bdb21970376bf8cfb4127fc6e9c" Selector="&lt;wnd app='outlook.exe' cls='rctrl_renwnd32' title='UiPath_robot - Vladyslav.Hnatchenko@eleks.com - Outlook' /&gt;">
             <ui:WindowScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -84,170 +84,186 @@
                 <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <ui:GetFullText DisplayName="Get full text '_WwG'" sap2010:WorkflowViewState.IdRef="GetFullText_2" IgnoreHidden="False">
                     <ui:GetFullText.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b4362fee2f500c99c8509c46cd142eae" Selector="&lt;wnd aaname='Form Regions' cls='AfxWndW' /&gt;&lt;wnd ctrlid='4159' /&gt;&lt;wnd cls='_WwG' title='Message' /&gt;" WaitForReady="INTERACTIVE" />
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b4362fee2f500c99c8509c46cd142eae" Selector="&lt;wnd aaname='Form Regions' cls='AfxWndW' /&gt;&lt;wnd idx='1' /&gt;&lt;wnd cls='_WwG' title='Message' /&gt;" WaitForReady="INTERACTIVE" />
                     </ui:GetFullText.Target>
                     <ui:GetFullText.Text>
                       <OutArgument x:TypeArguments="ui:GenericValue">[Wwg]</OutArgument>
                     </ui:GetFullText.Text>
                   </ui:GetFullText>
-                  <ui:WriteTextFile DisplayName="Write text file" FileName="1.csv" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[Wwg]" />
+                  <ui:WriteTextFile DisplayName="Write text file" FileName="contacts_from_json.txt" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[Wwg]" />
                 </Sequence>
               </ActivityAction>
             </ui:WindowScope.Body>
           </ui:WindowScope>
         </Sequence>
         <FlowStep.Next>
-          <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_10">
-            <Sequence DisplayName="LoginToSalesforce" sap2010:WorkflowViewState.IdRef="Sequence_14">
-              <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://www.salesforce.com/eu/">
-                <ui:OpenBrowser.Body>
-                  <ActivityAction x:TypeArguments="x:Object">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                      <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize window" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://login.salesf...'" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                        <ui:Click.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:Click.CursorPosition>
-                        <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6f51517bf35ad2e6c16de156899d3798" Selector="&lt;webctrl aaname='Login' css-selector='body&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:Click.Target>
-                      </ui:Click>
-                      <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  username'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="False" Text="hnatchenko.vladyslav@gmail.com">
-                        <ui:TypeInto.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3d546163eae13cf564e7a8f414b62e50" Selector="&lt;html title='Login | Salesforce' /&gt;&lt;webctrl id='username' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:TypeInto.Target>
-                      </ui:TypeInto>
-                      <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  password'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="False" Text="Test123=">
-                        <ui:TypeInto.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0b037f7514db46d20df584bf6bf93c80" Selector="&lt;webctrl id='password' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:TypeInto.Target>
-                      </ui:TypeInto>
-                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  Login'" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                        <ui:Click.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:Click.CursorPosition>
-                        <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5f625a16349c8efa2ace33cd7f71a1f1" Selector="&lt;webctrl id='Login' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:Click.Target>
-                      </ui:Click>
-                    </Sequence>
-                  </ActivityAction>
-                </ui:OpenBrowser.Body>
-              </ui:OpenBrowser>
+          <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_15">
+            <Sequence DisplayName="json_to_csv" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="strJson" />
+                <Variable x:TypeArguments="sd:DataTable" Name="dt" />
+                <Variable x:TypeArguments="x:String" Name="strDt" />
+              </Sequence.Variables>
+              <ui:ReadTextFile Content="[strJson]" DisplayName="Read text file" FileName="contacts_from_json.txt" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+              <ui:DeserializeJson x:TypeArguments="sd:DataTable" DisplayName="Deserialize json" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[dt]" JsonString="[strJson]" />
+              <ui:OutputDataTable DataTable="[dt]" DisplayName="Output data table" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[strDt]" />
+              <WriteLine DisplayName="Write line" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[strDt]" />
+              <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[dt]" Delimitator="Comma" DisplayName="Write CSV" FilePath="new_contacts.csv" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
             </Sequence>
             <FlowStep.Next>
-              <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_11">
-                <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[dtContacts]" Delimitator="Comma" DisplayName="ReadCSV" FilePath="contacts.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+              <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_10">
+                <Sequence DisplayName="LoginToSalesforce" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://www.salesforce.com/eu/">
+                    <ui:OpenBrowser.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                          <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize window" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://login.salesf...'" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6f51517bf35ad2e6c16de156899d3798" Selector="&lt;webctrl aaname='Login' css-selector='body&amp;gt;header&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  username'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="False" Text="hnatchenko.vladyslav@gmail.com">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3d546163eae13cf564e7a8f414b62e50" Selector="&lt;html title='Login | Salesforce' /&gt;&lt;webctrl id='username' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  password'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="False" Text="Test123=">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0b037f7514db46d20df584bf6bf93c80" Selector="&lt;webctrl id='password' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  Login'" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5f625a16349c8efa2ace33cd7f71a1f1" Selector="&lt;webctrl id='Login' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                            </ui:Click.Target>
+                          </ui:Click>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:OpenBrowser.Body>
+                  </ui:OpenBrowser>
+                </Sequence>
                 <FlowStep.Next>
-                  <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_8">
-                    <Sequence DisplayName="SalesforceCreateContacts" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://eu16.salesfo...'" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                        <ui:Click.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:Click.CursorPosition>
-                        <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8136f829f29b23b992cc99c9bcf8db52" Selector="&lt;html title='Salesforce - Professional Edition' /&gt;&lt;webctrl parentid='Contact_Tab' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:Click.Target>
-                      </ui:Click>
-                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                        <ui:Click.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:Click.CursorPosition>
-                        <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c9b58d4850e694c28dd4a75b06d8d7b1" Selector="&lt;html title='Contacts: Home ~ Salesforce - Professional Edition' /&gt;&lt;webctrl name='new' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                        </ui:Click.Target>
-                      </ui:Click>
-                      <ui:ForEachRow DataTable="[dtContacts]" DisplayName="For each row" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-                        <ui:ForEachRow.Body>
-                          <ActivityAction x:TypeArguments="sd:DataRow">
-                            <ActivityAction.Argument>
-                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                            </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                              <WriteLine DisplayName="Write line" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[row(&quot;Last Name&quot;).ToString]" />
-                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  name_firstcon2'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;First Name&quot;).ToString]">
-                                <ui:TypeInto.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f0952f1801b1614b415bb3bf5669b937" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='name_firstcon2' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                                </ui:TypeInto.Target>
-                              </ui:TypeInto>
-                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  name_lastcon2'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Last Name&quot;).ToString]">
-                                <ui:TypeInto.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e96b607e7c57138a98501e5db8fb46eb" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='name_lastcon2' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                                </ui:TypeInto.Target>
-                              </ui:TypeInto>
-                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  con4'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="salesforce.com">
-                                <ui:TypeInto.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="08f920f76f107e36850fd024af46c72e" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='con4' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                                </ui:TypeInto.Target>
-                              </ui:TypeInto>
-                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  con15'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Email&quot;).ToString]">
-                                <ui:TypeInto.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="add9c48c1c74a85af1c3c758236c3864" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='con15' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                                </ui:TypeInto.Target>
-                              </ui:TypeInto>
-                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  con10'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Phone&quot;).ToString]">
-                                <ui:TypeInto.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9c33642da09a142899c3b9a0ae402af4" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='con10' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                                </ui:TypeInto.Target>
-                              </ui:TypeInto>
-                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2b26dfeb013cf1478ab04d8432f129e1" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl name='save_new' parentid='topButtonRow' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
-                                </ui:Click.Target>
-                              </ui:Click>
-                            </Sequence>
-                          </ActivityAction>
-                        </ui:ForEachRow.Body>
-                      </ui:ForEachRow>
-                    </Sequence>
+                  <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_11">
+                    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[dtContacts]" Delimitator="Comma" DisplayName="ReadCSV" FilePath="new_contacts.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
                     <FlowStep.Next>
-                      <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_14">
-                        <ui:CloseApplication DisplayName="Close application 'iexplore.exe Salesforce'" sap2010:WorkflowViewState.IdRef="CloseApplication_3">
-                          <ui:CloseApplication.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e4e02f898201a4ed1f51fb1ef794dbb4" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='Contact Edit: New Contact ~ Salesforce - Professional Edition - *' /&gt;" WaitForReady="INTERACTIVE" />
-                          </ui:CloseApplication.Target>
-                        </ui:CloseApplication>
+                      <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_8">
+                        <Sequence DisplayName="SalesforceCreateContacts" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  https://eu16.salesfo...'" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8136f829f29b23b992cc99c9bcf8db52" Selector="&lt;html title='Salesforce - Professional Edition' /&gt;&lt;webctrl parentid='Contact_Tab' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c9b58d4850e694c28dd4a75b06d8d7b1" Selector="&lt;html title='Contacts: Home ~ Salesforce - Professional Edition' /&gt;&lt;webctrl name='new' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:ForEachRow DataTable="[dtContacts]" DisplayName="For each row" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                            <ui:ForEachRow.Body>
+                              <ActivityAction x:TypeArguments="sd:DataRow">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <WriteLine DisplayName="Write line" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[row(&quot;Last Name&quot;).ToString]" />
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  name_firstcon2'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;First Name&quot;).ToString]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f0952f1801b1614b415bb3bf5669b937" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='name_firstcon2' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  name_lastcon2'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Last Name&quot;).ToString]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e96b607e7c57138a98501e5db8fb46eb" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='name_lastcon2' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  con4'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="salesforce.com">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="08f920f76f107e36850fd024af46c72e" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='con4' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  con15'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Email&quot;).ToString]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="add9c48c1c74a85af1c3c758236c3864" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='con15' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'INPUT  con10'" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="[row(&quot;Phone&quot;).ToString]">
+                                    <ui:TypeInto.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9c33642da09a142899c3b9a0ae402af4" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl id='con10' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                    </ui:TypeInto.Target>
+                                  </ui:TypeInto>
+                                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT'" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                    <ui:Click.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </ui:Click.CursorPosition>
+                                    <ui:Click.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2b26dfeb013cf1478ab04d8432f129e1" Selector="&lt;html title='Contact Edit: New Contact ~ Salesforce - Professional Edition' /&gt;&lt;webctrl name='save_new' parentid='topButtonRow' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                                    </ui:Click.Target>
+                                  </ui:Click>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ForEachRow.Body>
+                          </ui:ForEachRow>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_14">
+                            <ui:CloseApplication DisplayName="Close application 'iexplore.exe Salesforce'" sap2010:WorkflowViewState.IdRef="CloseApplication_3">
+                              <ui:CloseApplication.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e4e02f898201a4ed1f51fb1ef794dbb4" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='Contact Edit: New Contact ~ Salesforce - Professional Edition - *' /&gt;" WaitForReady="INTERACTIVE" />
+                              </ui:CloseApplication.Target>
+                            </ui:CloseApplication>
+                          </FlowStep>
+                        </FlowStep.Next>
                       </FlowStep>
                     </FlowStep.Next>
                   </FlowStep>
@@ -263,7 +279,8 @@
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
-    <sads:DebugSymbol.Symbol>d11DOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEZXNrdG9wXDAxVmxhZHlzbGF2XEdpdEh1Ylx1aXBhdGhfcHJvamVjdFxTYWxlc2ZvcmNlNFxNYWluLnhhbWw6RAOLAg8CAQFKCWIUAgEzZQ2aARgCASSdARGdAcIBAgEgoAEV8wEgAgEE9gEZ+gEvAgECTgthHAIBNGYPmQEgAgElnQE/nQFNAgEinQGBAZ0BjwECASGhARevASICAR6wARe+ASICARy/ARfyAScCAQX4AawB+AGmAgIBA06aAk6JAwIBPVQRXhwCATVmxQFm5QECATJsFZYBIAIBJq0BqgGtAZQCAgEfvAGqAbwBnQICAR2/ATC/AT4CARrFAR3vASgCAQZVE1wkAgE5XRNdlQECATZtF22PAQIBMW4XfCICAS99F4EBJQIBLIIBF4YBJQIBKYcBF5UBIgIBJ8YBH8YBoAECARjHAR/LAS0CARXMAR/QAS0CARLRAR/VAS0CAQ/WAR/aAS0CAQzbAR/fAS0CAQngAR/uASoCAQdXpgFXnAICATxaRlpLAgE6XYsBXZIBAgE4XUxdUwIBN3qqAXqkAwIBMH+qAX+AAgIBLn2zAn3TAgIBLYQBqgGEAdcBAgErggGzAoIBvQICASqTAaoBkwHUAQIBKMYBdsYBnQECARnJAbIByQG5AgIBF8cBwQLHAekCAgEWzgGyAc4BuAICARTMAcACzAHnAgIBE9MBsgHTAa8CAgER0QG3AtEBxwICARDYAbIB2AGwAgIBDtYBuALWAdsCAgEN3QGyAd0BsAICAQvbAbgC2wHbAgIBCuwBsgHsAc0CAgEI</sads:DebugSymbol.Symbol>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <sads:DebugSymbol.Symbol>d11DOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEZXNrdG9wXDAxVmxhZHlzbGF2XEdpdEh1Ylx1aXBhdGhfcHJvamVjdFxTYWxlc2ZvcmNlNFxNYWluLnhhbWxJRAOcAg8CAQFKCWIUAgFJZQ1wGAIBM3MRqAEcAgEkqwEVqwHKAQIBIK4BGYECJAIBBIQCHYgCMwIBAk4LYRwCAUprD2umAQIBRWwPbMIBAgFAbQ9tmQECATtuD25yAgE4bw9v0gECATR0E6cBJAIBJasBQ6sBUQIBIqsBhQGrAZcBAgEhrwEbvQEmAgEevgEbzAEmAgEczQEbgAIrAgEFhgKwAYYCqgICAQNOmgJOkAMCAVNUEV4cAgFLa1prcgIBSGsoazMCAUZstAFsvwECAUNsogFsqAECAUFtjQFtlgECAT5tLW0zAgE8bmZubwIBOW9Qb1YCATZvjAFvngECATV0yQF06QECATJ6GaQBJAIBJrsBrgG7AZgCAgEfygGuAcoBoQICAR3NATTNAUICARrTASH9ASwCAQZVE1wkAgFPXRNdpgECAUx7G3uTAQIBMXwbigEmAgEviwEbjwEpAgEskAEblAEpAgEplQEbowEmAgEn1AEj1AGkAQIBGNUBI9kBMQIBFdoBI94BMQIBEt8BI+MBMQIBD+QBI+gBMQIBDOkBI+0BMQIBCe4BI/wBLgIBB1emAVeWAgIBUlpGWksCAVBdnAFdowECAU5dTF1kAgFNiAGuAYgBqAMCATCNAa4BjQGEAgIBLosBtwKLAdcCAgEtkgGuAZIB2wECASuQAbcCkAHBAgIBKqEBrgGhAdgBAgEo1AF61AGhAQIBGdcBtgHXAb0CAgEX1QHFAtUB7QICARbcAbYB3AG8AgIBFNoBxALaAesCAgET4QG2AeEBswICARHfAbsC3wHLAgIBEOYBtgHmAbQCAgEO5AG8AuQB3wICAQ3rAbYB6wG0AgIBC+kBvALpAd8CAgEK+gG2AfoB0QICAQg=</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -278,6 +295,18 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="WindowScope_2" sap:VirtualizedContainerService.HintSize="414,503" />
       <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ReadTextFile_1" sap:VirtualizedContainerService.HintSize="314,59" />
+      <sap2010:ViewStateData Id="DeserializeJson`1_1" sap:VirtualizedContainerService.HintSize="314,60" />
+      <sap2010:ViewStateData Id="OutputDataTable_1" sap:VirtualizedContainerService.HintSize="314,22" />
+      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="314,61" />
+      <sap2010:ViewStateData Id="WriteCsvFile_1" sap:VirtualizedContainerService.HintSize="314,87" />
+      <sap2010:ViewStateData Id="Sequence_15" sap:VirtualizedContainerService.HintSize="200,51">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -351,7 +380,7 @@
       <sap2010:ViewStateData Id="FlowStep_14">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,514.02</av:Point>
+            <av:Point x:Key="ShapeLocation">200,564.02</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -359,36 +388,45 @@
       <sap2010:ViewStateData Id="FlowStep_8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,424.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,474.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,475.5 300,514.02</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,525.5 300,564.02</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_11">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,324.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,384.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,375.5 300,424.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,435.5 300,474.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,224.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,294.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,275.5 300,324.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,345.5 300,384.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_15">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,204.5</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,255.5 300,294.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="FlowStep_6">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <av:Point x:Key="ShapeLocation">200,124.5</av:Point>
+            <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
             <av:Size x:Key="ShapeSize">200,51</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,175.5 300,224.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,165.5 300,204.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
@@ -398,7 +436,7 @@
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,124.5</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,114.5</av:PointCollection>
             <x:Double x:Key="Height">635.5</x:Double>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
