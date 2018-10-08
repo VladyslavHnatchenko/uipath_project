@@ -75,7 +75,7 @@
             <Variable x:TypeArguments="nj:JsonConvert" Name="jsonConvert" />
             <Variable x:TypeArguments="sd:DataTable" Name="dtJson" />
           </Sequence.Variables>
-          <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[DTcsv]" Delimitator="Comma" DisplayName="Read CSV" FilePath="1.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+          <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[DTcsv]" Delimitator="Comma" DisplayName="Read CSV" FilePath="contacts.csv" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
           <Assign DisplayName="convert to json" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[strJson]</OutArgument>
@@ -114,7 +114,7 @@
     </Flowchart.StartNode>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
-    <sads:DebugSymbol.Symbol>d11DOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEZXNrdG9wXDAxVmxhZHlzbGF2XEdpdEh1Ylx1aXBhdGhfcHJvamVjdFxTYWxlc2ZvcmNlM1xNYWluLnhhbWwWRAN2DwIBAUcJYBQCAQxjDW4YAgECTgtOsQECARlPC1YUAgEVVwteFAIBEV8LX5kBAgENaA9ongECAQhpD20kAgEDTjlOQgIBG053Tn4CARpUNlRaAgEYUTdRQAIBFlw6XHACARRZO1lDAgESX4sBX5YBAgEPX0RfUwIBDmhbaGoCAQtoKGg0AgEJabECadECAgEHaYQBaZABAgEFaZgCaa0CAgEE</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d11DOlxVc2Vyc1x2bGFkeXNsYXYuaG5hdGNoZW5rb1xEZXNrdG9wXDAxVmxhZHlzbGF2XEdpdEh1Ylx1aXBhdGhfcHJvamVjdFxTYWxlc2ZvcmNlM1xNYWluLnhhbWwWRAN2DwIBAUcJYBQCAQxjDW4YAgECTgtOuAECARlPC1YUAgEVVwteFAIBEV8LX5kBAgENaA9ongECAQhpD20kAgEDTjlOQgIBG053ToUBAgEaVDZUWgIBGFE3UUACARZcOlxwAgEUWTtZQwIBEl+LAV+WAQIBD19EX1MCAQ5oW2hqAgELaChoNAIBCWmxAmnRAgIBB2mEAWmQAQIBBWmYAmmtAgIBBA==</sads:DebugSymbol.Symbol>
   </Flowchart>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
